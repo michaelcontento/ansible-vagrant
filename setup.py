@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='ansible-vagrant',
-      version='1.0.0',
+      version='1.0.1',
       description='Simple helper to use ansible with vagrant',
       url='https://github.com/michaelcontento/ansible-vagrant',
       author='Michael Contento',
