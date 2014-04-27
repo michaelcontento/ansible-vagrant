@@ -5,6 +5,7 @@ from distutils.core import setup
 setup(name='ansible-vagrant',
       version='1.0.0',
       description='Simple helper to use ansible with vagrant',
+      url='https://github.com/michaelcontento/ansible-vagrant',
       author='Michael Contento',
       author_email='michaelcontento@gmail.com',
       license='GPLv3',
