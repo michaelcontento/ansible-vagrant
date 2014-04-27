@@ -10,9 +10,18 @@ PORT=$(echo "$CONFIG" | egrep -o "Port .+" | cut -d" " -f2-)
 USER=$(echo "$CONFIG" | egrep -o "User .+" | cut -d" " -f2-)
 KEY=$(echo "$CONFIG" | egrep -o "IdentityFile .+" | cut -d" " -f2-)
 
+REPLACE_REGEX="^$HOSTNAME .*"
 LINE="$HOSTNAME \
    ansible_ssh_host=$HOST \
    ansible_ssh_port=$PORT \
    ansible_ssh_user=$USER \
    ansible_ssh_private_key_file=$KEY"
-sed -i "" -e "s#^$HOSTNAME .*#$LINE#g" $HOSTSFILE
+
+touch "$HOSTSFILE"
+FOUND=$(egrep "$REPLACE_REGEX" $HOSTSFILE | wc -l)
+
+if [ $FOUND -eq 0 ]; then
+    echo "$LINE" >> $HOSTSFILE
+else
+    sed -i "" -e "s#^$HOSTNAME .*#$LINE#g" $HOSTSFILE
+fi
