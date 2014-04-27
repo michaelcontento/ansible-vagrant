@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+ansible-vagrant-update-hosts
+ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook $@
