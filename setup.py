@@ -2,13 +2,11 @@
 
 from distutils.core import setup
 
-import pypandoc
-
 
 setup(name='ansible-vagrant',
       version='1.1.0',
       description='Simple helper to use ansible with vagrant',
-      long_description=pypandoc.convert('README.md', 'rst'),
+      long_description=open('README.rst').read(),
       url='https://github.com/michaelcontento/ansible-vagrant',
       author='Michael Contento',
       author_email='michaelcontento@gmail.com',
