@@ -16,7 +16,11 @@ Tired of keeping your `hosts` file up to date? [ansible-vagrant][] to the rescue
     # Same as: ansible-vagrant-update-hosts && ansible all -m ping
 
     $ ansible-playbook-vagrant playbook.yml
-    # Same as: ansible-vagrant-update-hosts && ansible-playbook paybook.yml
+    # Same as: ansible-vagrant-update-hosts && ansible-playbook playbook.yml
+
+
+Note that both `ansible-vagrant` and `ansible-playbook-vagrant` use ansible's
+`--limit=HOSTNAME` argument to only work on the vagrant box.
 
 ## Shortcuts
 
