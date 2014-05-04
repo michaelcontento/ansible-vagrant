@@ -2,7 +2,7 @@
 set -e
 
 HOSTNAME="vagrant"
-HOSTSFILE="./hosts"
+HOSTSFILE="./hosts_vagrant"
 
 CONFIG=$(vagrant ssh-config)
 HOST=$(echo "$CONFIG" | egrep -o "HostName .+" | cut -d" " -f2-)
