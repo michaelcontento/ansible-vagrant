@@ -2,11 +2,15 @@
 
 from distutils.core import setup
 
+try:
+    long_description = open('README.rst').read()
+except:
+    long_description = None
 
 setup(name='ansible-vagrant',
-      version='1.1.1',
+      version='1.1.2',
       description='Simple helper to use ansible with vagrant',
-      long_description=open('README.rst').read(),
+      long_description=long_description,
       url='https://github.com/michaelcontento/ansible-vagrant',
       author='Michael Contento',
       author_email='michaelcontento@gmail.com',
