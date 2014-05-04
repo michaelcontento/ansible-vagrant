@@ -4,7 +4,7 @@ from distutils.core import setup
 
 
 setup(name='ansible-vagrant',
-      version='1.1.0',
+      version='1.1.1',
       description='Simple helper to use ansible with vagrant',
       long_description=open('README.rst').read(),
       url='https://github.com/michaelcontento/ansible-vagrant',
