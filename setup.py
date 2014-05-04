@@ -6,7 +6,7 @@ import pypandoc
 
 
 setup(name='ansible-vagrant',
-      version='1.0.2',
+      version='1.1.0',
       description='Simple helper to use ansible with vagrant',
       long_description=pypandoc.convert('README.md', 'rst'),
       url='https://github.com/michaelcontento/ansible-vagrant',
