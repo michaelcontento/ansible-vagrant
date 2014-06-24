@@ -8,7 +8,7 @@ except:
     long_description = None
 
 setup(name='ansible-vagrant',
-      version='1.2.0',
+      version='1.2.1',
       description='Simple helper to use ansible with vagrant',
       long_description=long_description,
       url='https://github.com/michaelcontento/ansible-vagrant',
