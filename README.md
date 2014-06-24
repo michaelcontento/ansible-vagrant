@@ -10,6 +10,7 @@ Tired of keeping your `hosts` file up to date? [ansible-vagrant][] to the rescue
 
     $ ansible-vagrant-update-hosts
     $ cat hosts_vagrant
+    [vagrant]
     vagrant  ansible_ssh_host=127.0.0.1  ansible_ssh_port=2222  ansible_ssh_use...
 
     $ ansible-vagrant all -m ping
