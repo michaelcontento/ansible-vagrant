@@ -4,4 +4,4 @@ set -e
 ansible-vagrant-update-hosts
 ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook \
     --extra-vars="vagrant=true" \
-    --inventory=./hosts_vagrant $@
+    --inventory=./hosts_vagrant "$@"
