@@ -19,7 +19,7 @@ Tired of keeping your `hosts` file up to date? [ansible-vagrant][] to the rescue
 
     $ ansible-playbook-vagrant playbook.yml
     # Same as: ansible-vagrant-update-hosts \
-    #          && ansible-playbook --extra-vars="vagrant=true" \
+    #          && ansible-playbook --extra-vars="vagrant_host=true" \
     #                              --inventory=./hosts_vagrant playbook.yml
 
 ## Notes
@@ -28,7 +28,7 @@ Tired of keeping your `hosts` file up to date? [ansible-vagrant][] to the rescue
   errors with `vagrant destroy && vagrant up`
 - It's a good idea to put `hosts_vagrant` under `.gitignore`
 - `ansible-playbook-vagrant` adds a global variable named `vagrant`
-- Use `when: vagrant is (not) defined` to run stuff based on the current
+- Use `when: vagrant_host is (not) defined` to run stuff based on the current
   environment
 
 ## Shortcuts
