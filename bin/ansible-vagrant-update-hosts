@@ -23,5 +23,6 @@ FOUND=$(egrep "$REPLACE_REGEX" $HOSTSFILE | wc -l)
 if [ $FOUND -eq 0 ]; then
     printf "[vagrant]\n$LINE" >> $HOSTSFILE
 else
-    sed -i "" -e "s#^$HOSTNAME .*#$LINE#g" $HOSTSFILE
+    sed -i".backup" -e "s#^$HOSTNAME .*#$LINE#g" $HOSTSFILE
+    rm -f "$HOSTSFILE.backup"
 fi
